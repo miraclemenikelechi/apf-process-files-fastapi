@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "apf-process-files-fastapi"
+version = "0.1.0"
+description = ""
+authors = ["miraclemenikelechi"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = {extras = ["all"], version = "^0.110.1"}
+uvicorn = {extras = ["standard"], version = "^0.29.0"}
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
