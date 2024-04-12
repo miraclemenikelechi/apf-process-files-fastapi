@@ -1,8 +1,11 @@
 import starlette.status as status
 from fastapi import FastAPI
 from fastapi.responses import RedirectResponse
+from routes import users
 
-server = FastAPI()
+server = FastAPI(
+    description="a fastapi application that handles image upload along with user registration",
+)
 
 
 @server.get("/")
@@ -16,3 +19,6 @@ async def root():
         url="/docs",
         status_code=status.HTTP_302_FOUND,
     )
+
+
+server.include_router(users)
